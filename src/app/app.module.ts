@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppComponent } from './app.component';
+import { TestSvcService } from './test-svc.service';
+import { PetComponent } from './pet/pet.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PetComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [TestSvcService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
