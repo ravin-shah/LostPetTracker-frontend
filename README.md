@@ -1,3 +1,7 @@
+This is a simple frontend to track lost pets. 
+
+![UI](https://github.com/ravin-shah/LostPetTracker/blob/master/images/image.jpg?raw=true)
+
 # FirstProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
