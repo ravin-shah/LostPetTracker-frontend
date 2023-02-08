@@ -1,0 +1,45 @@
+<div *ngIf="pets" class="container" padding="10px">
+    <div class="row">
+        <div class="col-10">
+            <table class="table table-hover table-sm table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pet of pets">
+                    <td scope="row">{{pet.id}}</td>
+                    <td>{{pet.name}}</td>
+                    <td *ngIf="pet.lost">
+                        <button type="button" class="btn btn-primary" (click)="markFound(pet)">Found it!</button>
+                    </td>
+                    <td *ngIf="!pet.lost">
+                        <button type="button" class="btn btn-warning" (click)="markLost(pet)">Mark lost :(</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-light" (click)="delete(pet)">Stop tracking my pet!</button>
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <div class="col-1">
+            <button type="button" class="btn btn-primary" (click)="addPet()" *ngIf="!showFields">+ Add pet</button>
+            <div class="row">
+                <button type="button" class="btn btn-danger btn-sm" (click)="cancelPet()" *ngIf="showFields">Cancel</button>
+            </div>
+            <div *ngIf="showFields">
+                <label for="name"> Name: </label>
+                <input type="text" id="name" name="name" [(ngModel)]="newPet.name">
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-success btn-sm" (click)="submitPet()" *ngIf="showFields">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
