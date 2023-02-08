@@ -1,6 +1,6 @@
 This is a simple frontend to track lost pets. 
 
-![UI](https://github.com/ravin-shah/LostPetTracker/blob/master/screenshot.png?raw=true)
+![UI](https://github.com/ravin-shah/LostPetTracker-frontend/blob/master/screenshot.png)
 
 # FirstProject
 
